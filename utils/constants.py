@@ -1,0 +1,33 @@
+import re
+
+IMDB_LINK = 'https://www.imdb.com/title/{}'
+IMDB_TT_LINK = 'https://www.imdb.com/title/tt{}'
+YT_LINK = 'https://www.youtube.com/watch?v={}'
+
+COMANDO_DESCONOCIDO = [
+    'I do not know what to tell you..',
+    'You know that i do not understand you..',
+    'I still didnt learn that command..',
+    'Mmmm I do not understand..',
+    'I dont know how to interpret your request..',
+    'I dont respond to that command',
+    'I dont know that command. Did you write it well?',
+    'I dont understand what you want.',
+    'There is no such command.',
+]
+
+VALID_PREFIX = r'(\s|^)'  # It is valid if it is the beginning of the string or a space
+VALID_SUFFIX = r'(?=\s|$)'  # It is valid if space or EOS. (+ lookahead, not consuming)
+TICKET_MATCHER = r'(t-?|osp-?)(?P<ticket>\d{5,})'
+
+# Ticket ids of 5 or 6 numbers preceded by t|osp||osp- or any casing variant.
+TICKET_REGEX = re.compile(f'{VALID_PREFIX}{TICKET_MATCHER}{VALID_SUFFIX}', re.IGNORECASE)
+
+# Text starting with ~, \c, \code or $ will be monospaced formatted
+CODE_PREFIX = re.compile(r'^(~|\\code|\$|\\c) (?P<code>[\s\S]+)')
+
+# Minute in seconds
+MINUTE = 60
+
+# Buenos aires GMT offset
+GMT_BUENOS_AIRES = -3

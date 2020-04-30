@@ -1,0 +1,12 @@
+requests
+beautifulsoup4
+lxml
+python-telegram-bot
+psycopg2-binary
+sqlalchemy
+subliminal
+numpy
+dateparser
+pytz
+youtube_dl
+python-Levenshtein
