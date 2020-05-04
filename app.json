@@ -1,0 +1,48 @@
+{
+  "name": "VIPCollectioBot",
+  "description": "A bot by U Ask Vipin uploads",
+  "keywords": [
+    "telegram",
+    "best",
+    "indian",
+    "pyrogram",
+    "torrent",
+    "3",
+    "plugin",
+    "modular",
+    "productivity",
+    "youtube-dl",
+    "leecher"
+  ],
+  "repository": "https://github.com/gupta-vipin/VIPCollectionBot",
+  "success_url": "https://github.com/gupta-vipin/VIPCollectionBot",
+  "website": "https://github.com/gupta-vipin/VIPCollectionBot",
+  "env": {
+    "ENV": {
+      "description": "Setting this to ANYTHING will enable webhooks when in env mode",
+      "value": "ANYTHING"
+    },
+    "TMDB_KEY": {
+      "description": "",
+      "value": ""
+    },
+    "DATABASE_URL": {
+      "description": "",
+      "value": ""
+    },
+    "TG_BOT_TOKEN": {
+      "description": "get this value from @BotFather",
+      "value": ""
+    },
+  },
+  "addons": [
+  ],
+  "buildpacks": [
+  ],
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "free"
+    }
+  }
+}
