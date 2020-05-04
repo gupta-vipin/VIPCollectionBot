@@ -30,7 +30,7 @@
       "description": "",
       "value": ""
     },
-    "TG_BOT_TOKEN": {
+    "PYTEL": {
       "description": "get this value from @BotFather",
       "value": ""
     },
