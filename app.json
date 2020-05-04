@@ -35,10 +35,6 @@
       "value": ""
     },
   },
-  "addons": [
-  ],
-  "buildpacks": [
-  ],
   "formation": {
     "worker": {
       "quantity": 1,
