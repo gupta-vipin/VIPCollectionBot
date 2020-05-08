@@ -15,7 +15,7 @@ def handle_callbacks(bot, update, chat_data):
     if not context:
         user = update.effective_user.first_name
         message = (
-            f"Sorry {user}, I couldn't bring the info you asked for.\n"
+            f"Sorry {user}, I couldn't bring the info you asked for\n"
             f"Try invoking the command again to see if I get it 😊"
         )
         logger.info(f"Conflicting update: '{update.to_dict()}'. Chat data: {chat_data}")
