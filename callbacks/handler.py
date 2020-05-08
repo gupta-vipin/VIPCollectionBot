@@ -3,14 +3,10 @@ import logging
 
 from telegram.ext import CallbackQueryHandler
 
-from commands.dolar.callback import dolarhoy_callback
-from commands.dolar.keyboards import banco_keyboard
-from commands.hoypido.callback import hoypido_callback
-from commands.hoypido.keyboard import hoypido_keyboard
 
 logger = logging.getLogger(__name__)
 
-command_callback = {'dolarhoy': dolarhoy_callback, 'hoypido': hoypido_callback}
+
 
 
 def handle_callbacks(bot, update, chat_data):
